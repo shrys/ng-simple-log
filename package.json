@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "start": "node ./node_modules/typescript/bin/tsc && npm run minify",
+    "minify": "jsmin -o index.min.js index.js"
+  },
+  "devDependencies": {
+    "jsmin": "^1.0.1",
+    "typescript": "^5.1.6"
+  }
+}
