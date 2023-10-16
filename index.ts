@@ -34,14 +34,6 @@ if (window.$) {
 }
 //#endregion remove exception
 
-//#region get active element/component
-const _element = document.getElementsByTagName('')[0] || window.$0;
-let thiss = window.$0;
-if (_element && window.ng?.getComponent && _element.nodeName !== '#comment') {
-    thiss = window.ng.getComponent(_element);;
-}
-//#endregion get active element/component
-
 //#region queryParameter
 window.qp = location.href.split('?')[1];
 if (window.qp?.length > 0) {
@@ -53,3 +45,11 @@ if (window.qp?.length > 0) {
         }, {});
 }
 //#endregion queryParameter
+
+//#region get active element/component
+const _element = document.getElementsByTagName('')[0] || window.$0;
+let thiss = window.$0;
+if (_element && window.ng?.getComponent && _element.nodeName !== '#comment') {
+    thiss = window.ng.getComponent(_element);;
+}
+//#endregion get active element/component
