@@ -46,7 +46,7 @@ if (_element && window.ng?.getComponent && _element.nodeName !== '#comment') {
 window.qp = location.href.split('?')[1];
 if (window.qp?.length > 0) {
     window.qp = window.qp.split('&')
-        .reduce((a, v) => {
+        .reduce((a: { [key: string]: string | any }, v: string) => {
             const [key, value] = v.split('=');
             a[key] = value;
             return a;
