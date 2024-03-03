@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "node ./node_modules/typescript/bin/tsc && npm run minify",
+    "start": "node ./node_modules/typescript/bin/tsc --watch",
     "minify": "jsmin -o index.min.js index.js"
   },
   "devDependencies": {
