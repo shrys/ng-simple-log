@@ -5,6 +5,7 @@ interface Window {
     $: any;
     qp: any;
     ngDevMode: any;
+    printFetch: any;
 }
 
 let thiss = window.$0;
@@ -68,4 +69,10 @@ if (window.ngDevMode !== false && typeof window.ngDevMode === 'object') {
         });
     }
     //#endregion all parent angular components from current component, works with jQuery
+    //#region print fetch
+    window.printFetch = async (fetchStatement: Promise<any>) => {
+        const response = await fetchStatement.then(a => a.json());
+        console.log(response);
+    }
+    //#endregion print fetch
 }
